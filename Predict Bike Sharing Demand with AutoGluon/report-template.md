@@ -24,11 +24,10 @@ TODO: the error reduced from 0.65 to 0.64
 TODO: feature engineering
 
 ### Create a table with the models you ran, the hyperparameters modified, and the kaggle score.
-    "model"           : ["initial", "add_features", "hpo"],
-    "num_bag_folds"   : [   0,           0,           10  ],
-    "num_stack_levels": [   0,           0,           1 ],
-    "num_bag_sets"    : [   0,           0,           1  ],
-    "score"           : [1.79316,     0.67588,    0.65606]
+    "model"                     : ["initial", "add_features", "hpo"],
+    "hyperparameters"           : [   'None',  'None', 'multimodal'],
+    "hyperparameter_tune_kwargs": [   'None',  'None',       'auto'],
+    "score"                     : [1.79316,     0.67588,  0.48900]
 
 ### Create a line plot showing the top model score for the three (or more) training runs during the project.
 
