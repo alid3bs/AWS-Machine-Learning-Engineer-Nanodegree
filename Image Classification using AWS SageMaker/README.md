@@ -13,6 +13,7 @@ The project is designed to be dataset independent so if there is a dataset that 
 
 ### Access
 Upload the data to an S3 bucket through the AWS Gateway so that SageMaker has access to the data. 
+![data](https://user-images.githubusercontent.com/70338979/193952779-0af1785a-c052-4298-930d-d65e10b17138.PNG)
 
 ## Hyperparameter Tuning
 What kind of model did you choose for this experiment and why? Give an overview of the types of parameters and their ranges used for the hyperparameter search
@@ -21,9 +22,18 @@ What kind of model did you choose for this experiment and why? Give an overview 
 
 Remember that your README should:
 - Include a screenshot of completed training jobs
+ ![training_jobs](https://user-images.githubusercontent.com/70338979/193952681-4ddb7497-6945-4e19-a1d9-1bf955d9ff80.PNG)
+
 - Logs metrics during the training process
+objective_metric_name = "average test accuracy"
+objective_type = "Maximize"
+metric_definitions = [{"Name": "average test accuracy", "Regex": "Testing Loss: ([0-9\\.]+)"}]
+
 - Tune at least two hyperparameters
+![best hypers](https://user-images.githubusercontent.com/70338979/193952949-0e97e6aa-bc63-4bef-af30-2b2fe51d9066.PNG)
+
 - Retrieve the best best hyperparameters from all your training jobs
+![best hypers](https://user-images.githubusercontent.com/70338979/193952739-d17ea21a-6637-4700-8c6c-c2e606c8eb53.PNG)
 
 ## Debugging and Profiling
 **TODO**: Give an overview of how you performed model debugging and profiling in Sagemaker
@@ -38,6 +48,7 @@ Remember that your README should:
 **TODO**: Give an overview of the deployed model and instructions on how to query the endpoint with a sample input.
 
 **TODO** Remember to provide a screenshot of the deployed active endpoint in Sagemaker.
+![endpoint](https://user-images.githubusercontent.com/70338979/193952850-b6ca5eea-3512-42ad-b909-e5e05dc4d788.PNG)
 
 ## Standout Suggestions
 **TODO (Optional):** This is where you can provide information about any standout suggestions that you have attempted.
